@@ -36,8 +36,8 @@
   <li><b>MISO (Master Input Slave Output) –</b> o escravo envia informações ao mestre;</li>
   <li><b>SCK (Serial Clock) –</b> sincroniza a transmissão e determina a velocidade e quantidade de bits enviados;</li>
   <li><b>SS (Slave Select) –</b> seleciona o escravo para estabelecer a comunicação.</li></p>
-<h3>LCD 16X2</h3>
-<p><b>Pinos LCD 16X2</b></p>
+<h3>LCD 16x2</h3>
+<p><b>Pinos LCD 16x2</b></p>
 <table>
   <tr align=center><td>VSS</td><td>Alimentação 0V (GND)</td></tr>
   <tr align=center><td>VDD</td><td>Alimentação 5V (VCC)</td></tr>
@@ -52,15 +52,26 @@
   <tr align=center><td>A</td><td>Anodo da iluminação (5V)</td></tr>
   <tr align=center><td>K</td><td>Catodo da iluminação (GND)</td></tr>
 </table>
-
-
+<h3>O Projeto</h3>
+<p align=justify>Este projeto consiste em um sistema de controle de acesso por RFID. Quando se aproxima a etiqueta com o UID cadastrado o servo é acionado, como se fosse uma cancela, girando 180° para um lado e depois de um segundo retorna para a posição original. Ainda é apresentado uma mensagem no display, dando as boas-vindas ao usuário, e acendendo o LED verde, indicando que está liberado o acesso. Quando é aproximado a etiqueta com o UID não cadastrado o servo motor não é acionado, o display apresenta a mensagem de usuário desconhecido e o LED vermelho acende, indicando que o acesso não foi liberado.</p>
+<p align=justify>O circuito com os esquemas de ligação é mostrado abaixo. A única diferença está no potenciômetro para ajuste do contraste do display. No meu circuito joguei o pino VO diretamente no GND para ter maior visibilidade, mas caso necessário a inclusão do potenciômetro ele deve ser conectado conforme o circuito abaixo.</p>
+<p><b>Circuito do Projeto</b></p>
+<img src="l1nq.com/7Z8Fp">
+<p>Há diferença na pinagem SPI dos Arduinos. A tabela abaixo possui os pinos das placas MEGA e UNO</p>
+<table>
+  <tr><td><b>RC522</b></td><td><b>MEGA</b></td><td><b>UNO</b></td></tr>
+  <tr><td>MISO</td><td>50</td><td>12</td></tr>
+  <tr><td>MOSI</td><td>51</td><td>11</td></tr>
+  <tr><td>SCK</td><td>52</td><td>13</td></tr>
+  <tr><td>SDA</td><td>53</td><td>10</td></tr>
+</table>
 
 </p>
 <p align=justify>
 
 
-<p align=justify></p>
-<p align=justify></p>
+
+
 <p align=justify></p>
 <p align=justify></p>
 <p align=justify></p>
