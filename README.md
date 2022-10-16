@@ -1,22 +1,18 @@
-# RFID
-<h2>Controle de Acesso com RFID</h2>
+<h1>Controle de Acesso com RFID</h1>
 <h3>Introdução</h3>
 <p align=justify>Este projeto consiste em um sistema de controle de acesso eletrônico, por meio de identificação via RFID. O código principal é o RFID_Controle, que dá vida ao sistema. Os demais arquivos são códigos referências, usados como apoio no desenvolvimento do projeto, encontrados em fóruns e tutoriais onlines (o código na pasta RFID_Leitura retorna todas as informações contidas na tag/cartão RFID; RFID_Opcoes_Leitura apresenta duas formas de ler apenas a identificação HEX do cartão; Scroll_Uma_Linha é para rolar o texto em uma linha enquanto que a outra se mantém estática no display LCD).</p>
-<p>Bibliotecas utilizadas:</p>
+<h4>Bibliotecas utilizadas:</h4>
 <li>LiquidCrystal - display LCD 16x2</li>
 <li>Servo - servo motor (representando uma cancela ou uma fechadura eletrônica)</li>
 <li>MFRC522 - módulo RFID RC522</li>
 <li>SPI - comunicação serial</li>
-<br>
-<p>Material:</p>
+<h4>Material:</h4>
 <li>Arduino Mega;</li>
 <li>Display LCD 16x2;</li>
 <li>LEDs (verde e vermelho);</li>
 <li>Resistor 150R;</li>
 <li>Servo motor 9g SG90;</li>
 <li>Módulo RFID MFRC522 13,56MHz com tag e cartão;</li>
-<br>
-<p>O Arduino Mega usa as portas digitais 53 (SDA), 52 (SCK), 51 (MOSI) e 50 (MISO) na comunicação pelo protocolo SPI.</p>
 <h3>MFRC522</h3>
 <p align=justify>O módulo MRFC522 permite fazer a leitura de qualquer etiqueta do padrão Mifare que utiliza frequência de 13,56MHz em formato de cartão e tags tipo chaveiro e pulseira. Cada etiqueta possui um Identificador Único, denominado UID. É um código hexadecimal de 4 bytes. A alimentação do módulo é 3,3V e por isso é aconselhável o uso de um conversor de nível de tensão nos pinos de comunicação SPI. O módulo funciona bem quando conectado diretamente ao Arduino, porém no limite.</p>
 <p><b>Pinos RC522</b></p>
@@ -53,11 +49,11 @@
   <tr align=center><td>K</td><td>Catodo da iluminação (GND)</td></tr>
 </table>
 <h3>O Projeto</h3>
-<p align=justify>Este projeto consiste em um sistema de controle de acesso por RFID. Quando se aproxima a etiqueta com o UID cadastrado o servo é acionado, como se fosse uma cancela, girando 180° para um lado e depois de um segundo retorna para a posição original. Ainda é apresentado uma mensagem no display, dando as boas-vindas ao usuário, e acendendo o LED verde, indicando que está liberado o acesso. Quando é aproximado a etiqueta com o UID não cadastrado o servo motor não é acionado, o display apresenta a mensagem de usuário desconhecido e o LED vermelho acende, indicando que o acesso não foi liberado.</p>
+<p align=justify>Quando se aproxima a etiqueta com o UID cadastrado o servo é acionado, como se fosse uma cancela, girando 180° para um lado e depois de um segundo retorna para a posição original. Ainda é apresentado uma mensagem no display, dando as boas-vindas ao usuário, e acende o LED verde, indicando que está liberado o acesso. Quando é aproximado a etiqueta com o UID não cadastrado o servo motor não é acionado, o display apresenta a mensagem de usuário desconhecido e o LED vermelho acende, indicando que o acesso não foi liberado.</p>
 <p align=justify>O circuito com os esquemas de ligação é mostrado abaixo. A única diferença está no potenciômetro para ajuste do contraste do display. No meu circuito joguei o pino VO diretamente no GND para ter maior visibilidade, mas caso necessário a inclusão do potenciômetro ele deve ser conectado conforme o circuito abaixo.</p>
 <p><b>Circuito do Projeto</b></p>
 <img src="l1nq.com/7Z8Fp">
-<p>Há diferença na pinagem SPI dos Arduinos. A tabela abaixo possui os pinos das placas MEGA e UNO</p>
+<p>Há diferença na pinagem SPI dos Arduinos, dependendo da placa utilizada. A tabela abaixo possui os pinos das placas MEGA e UNO</p>
 <table>
   <tr><td><b>RC522</b></td><td><b>MEGA</b></td><td><b>UNO</b></td></tr>
   <tr><td>MISO</td><td>50</td><td>12</td></tr>
@@ -65,14 +61,3 @@
   <tr><td>SCK</td><td>52</td><td>13</td></tr>
   <tr><td>SDA</td><td>53</td><td>10</td></tr>
 </table>
-
-</p>
-<p align=justify>
-
-
-
-
-<p align=justify></p>
-<p align=justify></p>
-<p align=justify></p>
-<p align=justify></p>
