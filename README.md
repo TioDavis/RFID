@@ -1,6 +1,6 @@
 <h1>Controle de Acesso com RFID</h1>
 <h3>Introdução</h3>
-<p align=justify>Este projeto consiste em um sistema de controle de acesso eletrônico, por meio de identificação via RFID. O código principal é o RFID_Controle, que dá vida ao sistema. Os demais arquivos são códigos referências, usados como apoio no desenvolvimento do projeto, encontrados em fóruns e tutoriais onlines (o código na pasta RFID_Leitura retorna todas as informações contidas na tag/cartão RFID; RFID_Opcoes_Leitura apresenta duas formas de ler apenas a identificação HEX do cartão; Scroll_Uma_Linha é para rolar o texto em uma linha enquanto que a outra se mantém estática no display LCD).</p>
+<p align=justify>Este projeto consiste em um sistema de controle de acesso eletrônico, por meio de identificação via RFID.</p>
 <h4>Bibliotecas utilizadas:</h4>
 <li>LiquidCrystal - display LCD 16x2</li>
 <li>Servo - servo motor (representando uma cancela ou uma fechadura eletrônica)</li>
