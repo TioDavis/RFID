@@ -52,8 +52,8 @@
 <p align=justify>Quando se aproxima a etiqueta com o UID cadastrado o servo é acionado, como se fosse uma cancela, girando 180° para um lado e depois de um segundo retorna para a posição original. Ainda é apresentado uma mensagem no display, dando as boas-vindas ao usuário, e acende o LED verde, indicando que está liberado o acesso. Quando é aproximado a etiqueta com o UID não cadastrado o servo motor não é acionado, o display apresenta a mensagem de usuário desconhecido e o LED vermelho acende, indicando que o acesso não foi liberado.</p>
 <p align=justify>O circuito com os esquemas de ligação é mostrado abaixo. A única diferença está no potenciômetro para ajuste do contraste do display. No meu circuito joguei o pino VO diretamente no GND para ter maior visibilidade, mas caso necessário a inclusão do potenciômetro ele deve ser conectado conforme o circuito abaixo.</p>
 <p><b>Circuito do Projeto</b></p>
-<img src="l1nq.com/7Z8Fp">
-<p>Há diferença na pinagem SPI dos Arduinos, dependendo da placa utilizada. A tabela abaixo possui os pinos das placas MEGA e UNO</p>
+<img src="https://github.com/TioDavis/RFID/blob/main/Circuito%20RFID.jpg">
+<p><b>OBS:</b> Há diferença na pinagem SPI dos Arduinos, dependendo da placa utilizada. A tabela abaixo possui os pinos das placas MEGA e UNO</p>
 <table>
   <tr><td><b>RC522</b></td><td><b>MEGA</b></td><td><b>UNO</b></td></tr>
   <tr><td>MISO</td><td>50</td><td>12</td></tr>
